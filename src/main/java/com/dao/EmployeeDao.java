@@ -31,8 +31,11 @@ public class EmployeeDao {
 			}
 		} finally {
 			if (statement != null) {
-				statement.close();
+				statement.close();	
 			} 
+			if (connection != null) {
+				connection.close();	
+			}
 		}
 	}
 
